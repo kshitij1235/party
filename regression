@@ -1,0 +1,19 @@
+
+
+Data <-data.frame(x<-c(12,,21) , y<-c(12,,21) )
+relation<-lm(y~x,data)
+print(relation)
+
+
+
+print(summary(relation))
+
+
+
+a<-data.frame(x=170)
+result<-predict(relation,a)
+print(result)
+
+
+png(file=”output.png”)
+plot(x,y, abline(lm(x~y)) cex=1.3 , pch=16 , xlab=”weight in kg “ , ylab=”height in cm”  )
